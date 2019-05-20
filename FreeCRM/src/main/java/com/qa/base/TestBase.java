@@ -21,7 +21,7 @@ public class TestBase {
 	public void initialization() throws IOException
 	{
 		prop=new Properties();
-		FileInputStream fis=new FileInputStream("D:\\Selenium\\Workplace\\FreeCRM\\src\\main\\java\\com\\qa\\config\\config.properties");
+		FileInputStream fis=new FileInputStream(".\\src\\main\\java\\com\\qa\\config\\config.properties");
 		prop.load(fis);
 		
 		String browserName=prop.getProperty("browser");
