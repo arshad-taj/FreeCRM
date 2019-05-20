@@ -10,6 +10,7 @@ import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class TestBase {
 	
@@ -17,6 +18,7 @@ public class TestBase {
 	public static WebDriver driver;
 	public static Properties prop;
 	public Logger log=Logger.getLogger(this.getClass());
+	
 	
 	public void initialization() throws IOException
 	{
@@ -42,9 +44,12 @@ public class TestBase {
 			driver=new FirefoxDriver();
 		}
 		
-		driver.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
+		driver.manage().timeouts().pageLoadTimeout(100, TimeUnit.SECONDS);
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		
+		driver.manage().window().maximize();
 		driver.get(prop.getProperty("url"));
+		
 		
 		
 	}
