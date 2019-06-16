@@ -6,6 +6,8 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import com.aventstack.extentreports.MediaEntityBuilder;
+import com.aventstack.extentreports.Status;
+import com.aventstack.extentreports.markuputils.Markup;
 import com.qa.base.TestBase;
 
 public class SignupPageTest extends TestBase{
@@ -19,9 +21,8 @@ public class SignupPageTest extends TestBase{
 	@Test
 	public void exTest() throws IOException {
 		
-		extentLogger=extent.createTest("tetetetet");
-		extentLogger.pass("TEST IS PASSED", MediaEntityBuilder.createScreenCaptureFromPath("C:/Users/Arshad/Desktop/POM.JPG").build());
-		extent.flush();
+		
+		
 	}
 
 }
